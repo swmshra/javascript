@@ -268,3 +268,5 @@ function updateGameResult(winner) {
     stats[result[winner]['status']]++; 
     updateStatistics();
 }
+
+//That's it for now
