@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Projects</title>
+</head>
+<body>
+    <div class="container">
+        <div class="challenge">
+            <h1>Challenge 1: Age in Days</h1>
+            <button type="button" onclick='getAge()' class="btn btn-success">Click Me</button>
+            <button type="button" onclick='reset()' class="btn btn-danger">Reset</button>
+            <div id="challenge1Result"></div>
+        </div>
+        <div class="challenge">
+            <h1 >Challenge 2: Generate Flowers</h1>
+            <button type="button" class="btn btn-success" onclick="generateFlower()">Generate</button>
+            <button type="button" onclick='flowerReset()' class="btn btn-danger">Reset</button>
+            <div id="challenge2Result"></div>
+        </div>
+        <div class="challenge">
+            <h1>Challenge 3: Rock, Paper, Scissor</h1>
+            <div id="rpsImages">
+                <img src="static/images/paper.jpeg" id="paper" onclick="rpsGame(this)"/>
+                <img src="static/images/rock.jpeg" id="rock" onclick="rpsGame(this)"/>
+                <img src="static/images/scissor.jpeg" id="scissor" onclick="rpsGame(this)"/>
+            </div>
+            <div id='challenge3Result'></div>
+            <button type='button' id='rpsReset' class="btn btn-danger" style="display: none;" onclick="rpsReset()">Reset</button>
+        </div>
+        <div class="challenge">
+            <h1>Challenge 4: Change buttons color</h1>
+            <form action="#">
+                <select name='backdrop' id='background' onchange="changeButtonsColor(this)" >
+                    <option value='random'>Random</option>
+                    <option value='red'>Red</option>
+                    <option value='green'>Green</option>
+                    <option value='blue'>Blue</option>
+                    <option value='reset'>Reset</option>
+                </select>
+            </form>
+            <button class='btn btn-primary'>Button 1</button>
+            <button class='btn btn-danger'>Button 2</button>
+            <button class='btn btn-warning'>Button 3</button>
+            <button class='btn btn-success'>Button 4</button>
+        </div>
+        <div class='challenge'>
+            <h1>Challenge 5: BlackJack</h1>
+            <div>
+                <h3 id='gameResult'>Let's Play</h3>
+            </div>
+            <div class='gameArea'>
+                <div class='gameBorder'>
+                    <div class='row'>
+                        <div class='userArea col-sm-4'>
+                            <h2>User: <span id='userScore' value='0'>0</span></h2>
+                            <div id='userArea'>
+
+                            </div>
+                        </div>
+                        <div class='botArea col-sm-4'>
+                            <h2>Dealer: <span  id='botScore' value='0'>0</span></h2>
+                            <div id='botArea'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class='gameOptions'>
+                        <button class='btn btn-success' id='hitButton' >HIT</button>
+                        <button class='btn btn-primary' id='standButton'>STAND</button>
+                        <button class='btn btn-danger' id='dealButton'>DEAL</button>
+                    </div>
+                </div>
+            </div>
+            <div id='gameScore'>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>WINS</th>
+                            <th>LOSES</th>
+                            <th>DRAWS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id='userWins'>0</td>
+                            <td id='userLoses'>0</td>
+                            <td id='userDraws'>0</td>
+                        </tr>
+                    </tbody>
+                </table>            
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="static/javascript.js"></script>
+</body>
+</html>
+
+
